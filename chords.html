@@ -177,6 +177,7 @@
 
 	<script type="text/javascript">
 		var stopTimer = 1;
+		const audioCtx = new AudioContext();
 		const keysArray = Array(71).fill(0).map((a,i)=>i-18);
 		const noteVals = {
 			"A": 0,
@@ -204,7 +205,7 @@
 		var notePlayers = {};
 
 		keysArray.forEach(a=>{
-			v = new SoundPlayer(new AudioContext());
+			v = new SoundPlayer(audioCtx);
 			v.play(frequency(a),0.0001,"sine");
 			notePlayers[a] = v;
 		})
