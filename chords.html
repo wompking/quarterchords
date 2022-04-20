@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+	<text>Input note names:</text><br>
+	<textarea rows="5" cols="60" id="input" placeholder="C4 E4 G4"></textarea><br>
+	<button type="button" id="listen">Listen</button><br><br>
+
+	<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1024" height="1024">
+		<g transform="scale(1.5,1.5) translate(1,1)">
+			<g>
+				<rect width="25" height="120" fill="#ffffff" stroke="black" stroke-width="1.3px" x="000" id="n-18"/>
+				<rect width="25" height="120" fill="#ffffff" stroke="black" stroke-width="1.3px" x="025" id="n-14"/>
+				<rect width="25" height="120" fill="#ffffff" stroke="black" stroke-width="1.3px" x="050" id="n-10"/>
+				<rect width="25" height="120" fill="#ffffff" stroke="black" stroke-width="1.3px" x="075" id="n-8"/>
+				<rect width="25" height="120" fill="#ffffff" stroke="black" stroke-width="1.3px" x="100" id="n-4"/>
+				<rect width="25" height="120" fill="#ffffff" stroke="black" stroke-width="1.3px" x="125" id="n0"/>
+				<rect width="25" height="120" fill="#ffffff" stroke="black" stroke-width="1.3px" x="150" id="n4"/>
+
+				<rect width="10" height="90" fill="#888888" stroke="black" stroke-width="1.3px" x="015" id="n-17"/>
+				<rect width="10" height="90" fill="#888888" stroke="black" stroke-width="1.3px" x="025" id="n-15"/>
+				<rect width="10" height="90" fill="#888888" stroke="black" stroke-width="1.3px" x="040" id="n-13"/>
+				<rect width="10" height="90" fill="#888888" stroke="black" stroke-width="1.3px" x="050" id="n-11"/>
+
+				<rect width="10" height="90" fill="#888888" stroke="black" stroke-width="1.3px" x="070" id="n-9"/>
+
+				<rect width="10" height="90" fill="#888888" stroke="black" stroke-width="1.3px" x="090" id="n-7"/>
+				<rect width="10" height="90" fill="#888888" stroke="black" stroke-width="1.3px" x="100" id="n-5"/>
+				<rect width="10" height="90" fill="#888888" stroke="black" stroke-width="1.3px" x="115" id="n-3"/>
+				<rect width="10" height="90" fill="#888888" stroke="black" stroke-width="1.3px" x="125" id="n-1"/>
+				<rect width="10" height="90" fill="#888888" stroke="black" stroke-width="1.3px" x="140" id="n1"/>
+				<rect width="10" height="90" fill="#888888" stroke="black" stroke-width="1.3px" x="150" id="n3"/>
+
+				<rect width="13" height="60" fill="#000000" stroke="black" stroke-width="1.3px" x="018.5" id="n-16"/>
+				<rect width="13" height="60" fill="#000000" stroke="black" stroke-width="1.3px" x="043.5" id="n-12"/>
+				<rect width="13" height="60" fill="#000000" stroke="black" stroke-width="1.3px" x="093.5" id="n-6"/>
+				<rect width="13" height="60" fill="#000000" stroke="black" stroke-width="1.3px" x="118.5" id="n-2"/>
+				<rect width="13" height="60" fill="#000000" stroke="black" stroke-width="1.3px" x="143.5" id="n2"/>
+			</g>
+
+			<g transform="translate(175,0)">
+
+				<rect width="25" height="120" fill="#ffffff" stroke="black" stroke-width="1.3px" x="000" id="n6"/>
+				<rect width="25" height="120" fill="#ffffff" stroke="black" stroke-width="1.3px" x="025" id="n10"/>
+				<rect width="25" height="120" fill="#ffffff" stroke="black" stroke-width="1.3px" x="050" id="n14"/>
+				<rect width="25" height="120" fill="#ffffff" stroke="black" stroke-width="1.3px" x="075" id="n16"/>
+				<rect width="25" height="120" fill="#ffffff" stroke="black" stroke-width="1.3px" x="100" id="n20"/>
+				<rect width="25" height="120" fill="#ffffff" stroke="black" stroke-width="1.3px" x="125" id="n24"/>
+				<rect width="25" height="120" fill="#ffffff" stroke="black" stroke-width="1.3px" x="150" id="n28"/>
+
+				<rect width="10" height="90" fill="#888888" stroke="black" stroke-width="1.3px" x="-005" id="n5"/>
+
+				<rect width="10" height="90" fill="#888888" stroke="black" stroke-width="1.3px" x="015" id="n7"/>
+				<rect width="10" height="90" fill="#888888" stroke="black" stroke-width="1.3px" x="025" id="n9"/>
+				<rect width="10" height="90" fill="#888888" stroke="black" stroke-width="1.3px" x="040" id="n11"/>
+				<rect width="10" height="90" fill="#888888" stroke="black" stroke-width="1.3px" x="050" id="n13"/>
+
+				<rect width="10" height="90" fill="#888888" stroke="black" stroke-width="1.3px" x="070" id="n15"/>
+
+				<rect width="10" height="90" fill="#888888" stroke="black" stroke-width="1.3px" x="090" id="n17"/>
+				<rect width="10" height="90" fill="#888888" stroke="black" stroke-width="1.3px" x="100" id="n19"/>
+				<rect width="10" height="90" fill="#888888" stroke="black" stroke-width="1.3px" x="115" id="n21"/>
+				<rect width="10" height="90" fill="#888888" stroke="black" stroke-width="1.3px" x="125" id="n23"/>
+				<rect width="10" height="90" fill="#888888" stroke="black" stroke-width="1.3px" x="140" id="n25"/>
+				<rect width="10" height="90" fill="#888888" stroke="black" stroke-width="1.3px" x="150" id="n27"/>
+
+				<rect width="13" height="60" fill="#000000" stroke="black" stroke-width="1.3px" x="018.5" id="n8"/>
+				<rect width="13" height="60" fill="#000000" stroke="black" stroke-width="1.3px" x="043.5" id="n12"/>
+				<rect width="13" height="60" fill="#000000" stroke="black" stroke-width="1.3px" x="093.5" id="n18"/>
+				<rect width="13" height="60" fill="#000000" stroke="black" stroke-width="1.3px" x="118.5" id="n22"/>
+				<rect width="13" height="60" fill="#000000" stroke="black" stroke-width="1.3px" x="143.5" id="n26"/>
+			</g>
+
+			<g transform="translate(350,0)">
+
+				<rect width="25" height="120" fill="#ffffff" stroke="black" stroke-width="1.3px" x="000" id="n30"/>
+				<rect width="25" height="120" fill="#ffffff" stroke="black" stroke-width="1.3px" x="025" id="n34"/>
+				<rect width="25" height="120" fill="#ffffff" stroke="black" stroke-width="1.3px" x="050" id="n38"/>
+				<rect width="25" height="120" fill="#ffffff" stroke="black" stroke-width="1.3px" x="075" id="n40"/>
+				<rect width="25" height="120" fill="#ffffff" stroke="black" stroke-width="1.3px" x="100" id="n44"/>
+				<rect width="25" height="120" fill="#ffffff" stroke="black" stroke-width="1.3px" x="125" id="n48"/>
+				<rect width="25" height="120" fill="#ffffff" stroke="black" stroke-width="1.3px" x="150" id="n52"/>
+
+				<rect width="10" height="90" fill="#888888" stroke="black" stroke-width="1.3px" x="-005" id="n29"/>
+
+				<rect width="10" height="90" fill="#888888" stroke="black" stroke-width="1.3px" x="015" id="n31"/>
+				<rect width="10" height="90" fill="#888888" stroke="black" stroke-width="1.3px" x="025" id="n33"/>
+				<rect width="10" height="90" fill="#888888" stroke="black" stroke-width="1.3px" x="040" id="n35"/>
+				<rect width="10" height="90" fill="#888888" stroke="black" stroke-width="1.3px" x="050" id="n37"/>
+
+				<rect width="10" height="90" fill="#888888" stroke="black" stroke-width="1.3px" x="070" id="n39"/>
+
+				<rect width="10" height="90" fill="#888888" stroke="black" stroke-width="1.3px" x="090" id="n41"/>
+				<rect width="10" height="90" fill="#888888" stroke="black" stroke-width="1.3px" x="100" id="n43"/>
+				<rect width="10" height="90" fill="#888888" stroke="black" stroke-width="1.3px" x="115" id="n45"/>
+				<rect width="10" height="90" fill="#888888" stroke="black" stroke-width="1.3px" x="125" id="n47"/>
+				<rect width="10" height="90" fill="#888888" stroke="black" stroke-width="1.3px" x="140" id="n49"/>
+				<rect width="10" height="90" fill="#888888" stroke="black" stroke-width="1.3px" x="150" id="n51"/>
+
+				<rect width="13" height="60" fill="#000000" stroke="black" stroke-width="1.3px" x="018.5" id="n32"/>
+				<rect width="13" height="60" fill="#000000" stroke="black" stroke-width="1.3px" x="043.5" id="n36"/>
+				<rect width="13" height="60" fill="#000000" stroke="black" stroke-width="1.3px" x="093.5" id="n42"/>
+				<rect width="13" height="60" fill="#000000" stroke="black" stroke-width="1.3px" x="118.5" id="n46"/>
+				<rect width="13" height="60" fill="#000000" stroke="black" stroke-width="1.3px" x="143.5" id="n50"/>
+			</g>
+		</g>
+
+	</svg>
+
+	<script type="text/javascript">
+		// Original JavaScript code by Chirp Internet: www.chirp.com.au
+		// Please acknowledge use of this code by including this header.
+
+		function SoundPlayer(audioContext, filterNode) {
+			this.audioCtx = audioContext;
+			this.gainNode = this.audioCtx.createGain();
+			if(filterNode) {
+				// run output through extra filter (already connected to audioContext)
+				this.gainNode.connect(filterNode);
+			} else {
+				this.gainNode.connect(this.audioCtx.destination);
+			}
+			this.oscillator = null;
+		}
+
+		SoundPlayer.prototype.setFrequency = function(val, when) {
+			if(when) {
+				this.oscillator.frequency.setValueAtTime(val, this.audioCtx.currentTime + when);
+			} else {
+				this.oscillator.frequency.setValueAtTime(val, this.audioCtx.currentTime);
+			}
+			return this;
+		};
+
+		SoundPlayer.prototype.setVolume = function(val, when) {
+			if(when) {
+				this.gainNode.gain.exponentialRampToValueAtTime(val, this.audioCtx.currentTime + when);
+			} else {
+				this.gainNode.gain.setValueAtTime(val, this.audioCtx.currentTime);
+			}
+			return this;
+		};
+
+		SoundPlayer.prototype.setWaveType = function(waveType) {
+			this.oscillator.type = waveType;
+			return this;
+		};
+
+		SoundPlayer.prototype.play = function(freq, vol, wave, when) {
+			this.oscillator = this.audioCtx.createOscillator();
+			this.oscillator.connect(this.gainNode);
+			this.setFrequency(freq);
+			if(wave) {
+				this.setWaveType(wave);
+			}
+			this.setVolume(1/1000);
+			if(when) {
+				this.setVolume(1/1000, when - 0.02);
+				this.oscillator.start(when - 0.02);
+				this.setVolume(vol, when);
+			} else {
+				this.oscillator.start();
+				this.setVolume(vol, 0.02);
+			}
+			return this;
+		};
+
+		SoundPlayer.prototype.stop = function(when) {
+			if(when) {
+				this.gainNode.gain.setTargetAtTime(1/1000, this.audioCtx.currentTime + when - 0.05, 0.02);
+				this.oscillator.stop(this.audioCtx.currentTime + when);
+			} else {
+				this.gainNode.gain.setTargetAtTime(1/1000, this.audioCtx.currentTime, 0.02);
+				this.oscillator.stop(this.audioCtx.currentTime + 0.05);
+			}
+			return this;
+		};
+	</script>
+
+	<script type="text/javascript">
+		var stopTimer = 1;
+		const keysArray = Array(71).fill(0).map((a,i)=>i-18);
+		const noteVals = {
+			"A": 0,
+			"B": 4,
+			"C": 6,
+			"D": 10,
+			"E": 14,
+			"F": 16,
+			"G": 20
+		};
+		const accidentalVals = {
+			"#": 2,
+			"^": 1,
+			"v": -1,
+			"d": -1,
+			"b": -2
+		}
+
+		const tuneA4 = 440;
+
+		function frequency(noteInt) {
+			return 2 ** (1/24 * noteInt) * tuneA4;
+		}
+
+		var notePlayers = {};
+
+		keysArray.forEach(a=>{
+			v = new SoundPlayer(new AudioContext());
+			v.play(frequency(a),0.0001,"sine");
+			notePlayers[a] = v;
+		})
+
+		function getActive(){
+			return document.getElementById("input").value.split(/ |\n/).map(noteNameToInt).filter(a=>a!==undefined);
+		}
+
+		function startPlayers(){
+			getActive().forEach(a=>{
+				notePlayers[a].setVolume(0.1);
+			});
+		}
+
+		function stopPlayers(){
+			keysArray.forEach(a=>{
+				notePlayers[a].setVolume(0);
+			})
+		}
+
+		function noteNameToInt(name){
+			splitRegex = "([A-G])([#^vb]*)(-?[0-9]+)?";
+			match = name.match(splitRegex);
+			if (match){
+				let [throwVal, noteName, accidental, octave] = match;
+
+				outVal = noteVals[noteName];
+				// console.log(noteName);
+				// console.log(outVal);
+				outVal += accidental.split("").map(a=>accidentalVals[a]).reduce((a,b)=>a+b,0);
+				// console.log(accidental);
+				// console.log(outVal);
+				if (octave){
+					outVal += parseInt(octave-4)*24;
+				}
+				// console.log(octave);
+				// console.log(outVal);
+
+				return outVal;
+			}
+
+		}
+
+		function updateKeySingle(key, pressed){
+			el = document.getElementById("n"+(key+""));
+			if (el){
+				color = null;
+				switch (el.attributes.fill.value){
+					case "#ffffff":
+					case "#ff8888":
+						color = pressed ? "#ff8888" : "#ffffff";
+					break;
+					case "#888888":
+					case "#dd4444":
+						color = pressed ? "#dd4444" : "#888888";
+					break;
+					case "#000000":
+					case "#ff0000":
+						color = pressed ? "#ff0000" : "#000000";
+					break;
+					default:
+						color = el.attributes.fill.value;
+					break;
+				}
+				el.attributes.fill.value = color;
+			}
+		}
+		function updateKeys(active){
+			keysArray.forEach(k=>{
+				if (active.includes(k)){
+					updateKeySingle(k, true);
+				} else {
+					updateKeySingle(k, false);
+				}
+			})
+		}
+
+		function listen() {
+			stopPlayers();
+			startPlayers();
+			stopTimer = 20;
+		}
+
+		document.getElementById("listen").onclick = ()=>listen();
+
+		function loop(){
+			updateKeys(getActive());
+			
+			if (stopTimer == 0){
+				stopPlayers();
+			}
+			if (stopTimer >= 0){
+				stopTimer--;
+			}
+			setTimeout(loop,100);
+		}
+		loop();
+	</script>
+</html>
