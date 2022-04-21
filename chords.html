@@ -176,7 +176,9 @@
 	</script>
 
 	<script type="text/javascript">
-		var stopTimer = 1;
+		var playTimer = -1;
+		var active = [];
+		var activeLength = 0;
 		const audioCtx = new AudioContext();
 		const keysArray = Array(71).fill(0).map((a,i)=>i-18);
 		const noteVals = {
@@ -206,7 +208,7 @@
 
 		keysArray.forEach(a=>{
 			v = new SoundPlayer(audioCtx);
-			v.play(frequency(a),0.0001,"sine");
+			v.play(frequency(a),0.0001,"triangle");
 			notePlayers[a] = v;
 		})
 
@@ -214,8 +216,8 @@
 			return document.getElementById("input").value.split(/ |\n/).map(noteNameToInt).filter(a=>a!==undefined);
 		}
 
-		function startPlayers(){
-			getActive().forEach(a=>{
+		function startPlayers(L){
+			L.forEach(a=>{
 				notePlayers[a].setVolume(0.1);
 			});
 		}
@@ -285,8 +287,9 @@
 
 		function listen() {
 			stopPlayers();
-			startPlayers();
-			stopTimer = 20;
+			active = getActive();
+			activeLength = active.length
+			playTimer = 0;
 		}
 
 		document.getElementById("listen").onclick = ()=>listen();
@@ -294,11 +297,18 @@
 		function loop(){
 			updateKeys(getActive());
 			
-			if (stopTimer == 0){
-				stopPlayers();
-			}
-			if (stopTimer >= 0){
-				stopTimer--;
+			if (playTimer >= 0){
+				if (playTimer < activeLength*5){
+					if (playTimer % 5 == 0){
+						startPlayers([active[Math.floor(playTimer/5)]]);
+					}
+				} else {
+					if (playTimer == (activeLength+4)*5){
+						stopPlayers();
+						playTimer = -2;
+					}
+				}
+				playTimer++;
 			}
 			setTimeout(loop,100);
 		}
