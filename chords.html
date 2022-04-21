@@ -2,7 +2,8 @@
 <html>
 	<text>Input note names:</text><br>
 	<textarea rows="5" cols="60" id="input" placeholder="C4 E4 G4"></textarea><br>
-	<button type="button" id="listen">Listen</button><br><br>
+	<button type="button" id="listen">Listen</button>
+	<button type="button" id="listenScale">Listen (scale)</button><br><br>
 
 	<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1024" height="1024">
 		<g transform="scale(1.5,1.5) translate(1,1)">
@@ -177,6 +178,7 @@
 
 	<script type="text/javascript">
 		var playTimer = -1;
+		var playScale = false;
 		var active = [];
 		var activeLength = 0;
 		const audioCtx = new AudioContext();
@@ -290,9 +292,18 @@
 			active = getActive();
 			activeLength = active.length
 			playTimer = 0;
+			playScale = false;
+		}
+		function listenScale() {
+			stopPlayers();
+			active = getActive();
+			activeLength = active.length
+			playTimer = 0;
+			playScale = true;
 		}
 
 		document.getElementById("listen").onclick = ()=>listen();
+		document.getElementById("listenScale").onclick = ()=>listenScale();
 
 		function loop(){
 			updateKeys(getActive());
@@ -300,6 +311,9 @@
 			if (playTimer >= 0){
 				if (playTimer < activeLength*5){
 					if (playTimer % 5 == 0){
+						if (playScale){
+							stopPlayers();
+						}
 						startPlayers([active[Math.floor(playTimer/5)]]);
 					}
 				} else {
@@ -310,7 +324,11 @@
 				}
 				playTimer++;
 			}
+			if (playTimer == -1){
+				stopPlayers();
+			}
 			setTimeout(loop,100);
+
 		}
 		loop();
 	</script>
