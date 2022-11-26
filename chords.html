@@ -293,6 +293,7 @@
 			activeLength = active.length
 			playTimer = 0;
 			playScale = false;
+			audioCtx.resume();
 		}
 		function listenScale() {
 			stopPlayers();
@@ -300,6 +301,7 @@
 			activeLength = active.length
 			playTimer = 0;
 			playScale = true;
+			audioCtx.resume();
 		}
 
 		document.getElementById("listen").onclick = ()=>listen();
